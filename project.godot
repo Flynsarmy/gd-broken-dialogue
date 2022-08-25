@@ -24,6 +24,10 @@ config/name="BrokenDialogue"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
+[audio]
+
+output_latency.web=15
+
 [autoload]
 
 Globals="*res://Globals.gd"

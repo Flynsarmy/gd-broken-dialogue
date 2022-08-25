@@ -15,7 +15,7 @@ const DIALOGUE_PITCHES = {
 
 export(NodePath) onready var response_template = get_node(response_template)
 
-onready var talk_sound := $TalkSound
+#onready var talk_sound := $TalkSound
 onready var balloon := $Balloon
 onready var margin := $Balloon/Margin
 onready var character_label := $Balloon/Margin/VBox/Character
@@ -168,9 +168,9 @@ func _on_Balloon_gui_input(event):
 
 func _on_Dialogue_spoke(letter, speed):
 	if not letter in [" ", "."]:
-		if letter_index == 0:
-			talk_sound.play()
-			var pitch = DIALOGUE_PITCHES.get(dialogue.character, 1)
-			talk_sound.pitch_scale = rand_range(pitch - 0.1, pitch + 0.1)
+		#if letter_index == 0:
+			#talk_sound.play()
+			#var pitch = DIALOGUE_PITCHES.get(dialogue.character, 1)
+			#talk_sound.pitch_scale = rand_range(pitch - 0.1, pitch + 0.1)
 		var actual_speed: int = 4 if speed >= 1 else 2
 		letter_index = (letter_index + 1) % actual_speed
