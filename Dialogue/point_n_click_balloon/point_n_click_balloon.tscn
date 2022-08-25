@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://pixel_balloon/font_italics.tres" type="DynamicFont" id=1]
+[ext_resource path="res://addons/dialogue_manager/dialogue_label.gd" type="Script" id=2]
+[ext_resource path="res://Dialogue/point_n_click_balloon/point_n_click_balloon.gd" type="Script" id=3]
+[ext_resource path="res://Dialogue/point_n_click_balloon/font_normal.tres" type="DynamicFont" id=5]
+
+[node name="PointNClickBalloon" type="CanvasLayer"]
+layer = 128
+script = ExtResource( 3 )
+
+[node name="DialogueLabel" type="RichTextLabel" parent="."]
+margin_left = 192.0
+margin_top = 62.0
+margin_right = 1226.0
+margin_bottom = 104.0
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_fonts/italics_font = ExtResource( 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "This is some dialogue"
+meta_underlined = false
+text = "This is some dialogue"
+scroll_active = false
+script = ExtResource( 2 )
+seconds_per_step = 0.0
+
+[connection signal="spoke" from="DialogueLabel" to="." method="_on_DialogueLabel_spoke"]

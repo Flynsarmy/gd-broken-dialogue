@@ -1,0 +1,36 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 5
+syntax_version = 2
+raw_text = "~ 1_and_2
+
+NPC1: This is NPC 1 speaking a full line of dialogue."
+errors = [  ]
+titles = {
+"1_and_2": "2"
+}
+lines = {
+"0": {
+"next_id": "2",
+"text": "1_and_2",
+"type": "title"
+},
+"2": {
+"character": "NPC1",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "This is NPC 1 speaking a full line of dialogue.",
+"time": null,
+"translation_key": "This is NPC 1 speaking a full line of dialogue.",
+"type": "dialogue"
+}
+}
